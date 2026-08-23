@@ -142,3 +142,133 @@
     color: var(--color-foreground);
   }
 }
+
+/* SentinelAI-X brand tokens */
+:root {
+  --brand-canvas: oklch(0.985 0.008 250);
+  --brand-navy: oklch(0.28 0.09 265);
+  --brand-blue: oklch(0.55 0.22 265);
+  --brand-violet: oklch(0.52 0.24 295);
+  --brand-pink: oklch(0.62 0.25 340);
+  --brand-muted: oklch(0.58 0.03 260);
+  --brand-icon: oklch(0.68 0.03 260);
+  --brand-border: oklch(0.9 0.03 250);
+}
+
+@theme inline {
+  --color-brand-canvas: var(--brand-canvas);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-violet: var(--brand-violet);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-icon: var(--brand-icon);
+  --color-brand-border: var(--brand-border);
+}
+
+@utility bg-brand-line {
+  background-image: linear-gradient(90deg, var(--brand-blue), var(--brand-violet), var(--brand-pink));
+}
+
+@utility text-gradient-brand {
+  background-image: linear-gradient(90deg, var(--brand-blue), var(--brand-violet), var(--brand-pink));
+  background-clip: text;
+  color: transparent;
+}
+
+@utility brand-glow-blue {
+  position: absolute;
+  inset-inline-start: -10%;
+  top: -15%;
+  height: 70vh;
+  width: 70vw;
+  border-radius: 9999px;
+  background: radial-gradient(circle, oklch(0.72 0.16 250 / 0.28), transparent 65%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+@utility brand-glow-pink {
+  position: absolute;
+  inset-inline-end: -10%;
+  bottom: -20%;
+  height: 60vh;
+  width: 60vw;
+  border-radius: 9999px;
+  background: radial-gradient(circle, oklch(0.75 0.18 340 / 0.18), transparent 65%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+@utility brand-circuit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 340px;
+  width: 340px;
+  pointer-events: none;
+  background-image:
+    linear-gradient(115deg, transparent 46%, oklch(0.7 0.2 340 / 0.35) 47%, transparent 48%),
+    linear-gradient(115deg, transparent 56%, oklch(0.68 0.18 250 / 0.3) 57%, transparent 58%),
+    linear-gradient(115deg, transparent 66%, oklch(0.7 0.2 300 / 0.25) 67%, transparent 68%);
+}
+
+@utility login-card {
+  border-radius: 2rem;
+  border: 1px solid oklch(0.88 0.05 255 / 0.8);
+  background: linear-gradient(160deg, oklch(1 0 0 / 0.85), oklch(0.96 0.02 255 / 0.75));
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 24px 60px -20px oklch(0.55 0.18 275 / 0.28),
+    0 0 0 1px oklch(1 0 0 / 0.6) inset;
+}
+
+@utility shield-badge {
+  display: flex;
+  height: 4.75rem;
+  width: 4.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem 1.25rem 45% 45% / 1.25rem 1.25rem 60% 60%;
+  background: linear-gradient(160deg, oklch(0.62 0.2 250), oklch(0.5 0.25 285));
+  box-shadow:
+    0 0 24px oklch(0.75 0.15 220 / 0.55),
+    0 0 40px oklch(0.6 0.22 300 / 0.4);
+}
+
+@utility field {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  height: 4rem;
+  border-radius: 1rem;
+  border: 1px solid oklch(0.9 0.04 250);
+  background: oklch(1 0 0 / 0.9);
+  padding-inline: 1.15rem;
+  box-shadow: 0 1px 2px oklch(0.55 0.1 265 / 0.06);
+}
+
+@utility field-input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font-size: 1.0625rem;
+  color: var(--brand-navy);
+  outline: none;
+}
+
+@utility btn-brand {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  border-radius: 1.15rem;
+  padding-block: 1.15rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: oklch(1 0 0);
+  background: linear-gradient(90deg, oklch(0.5 0.24 265), oklch(0.5 0.26 295), oklch(0.6 0.26 330));
+  box-shadow: 0 18px 36px -12px oklch(0.5 0.24 290 / 0.55);
+  transition: filter 150ms ease;
+}
