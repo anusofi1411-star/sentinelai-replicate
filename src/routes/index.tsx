@@ -1,10 +1,10 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, Lock, Eye, EyeOff, ArrowRight } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 
 import { supabase } from "@/integrations/supabase/client";
-import logoAsset from "@/assets/sentinel-logo.png.asset.json";
-import labAsset from "@/assets/lab-network.png.asset.json";
+import logoAsset from "@/assets/sentinel-logo-v3.png.asset.json";
+import labAsset from "@/assets/lab-network-v3.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -51,11 +51,9 @@ function SignInPage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-brand-canvas">
-      <div className="brand-glow-blue" aria-hidden="true" />
-      <div className="brand-glow-pink" aria-hidden="true" />
       <div className="brand-circuit" aria-hidden="true" />
 
-      <div className="relative mx-auto grid min-h-screen w-full max-w-[1536px] grid-cols-1 items-center gap-8 px-6 py-10 lg:grid-cols-[1fr_38%] lg:gap-4 lg:px-10">
+      <div className="relative mx-auto grid min-h-screen w-full max-w-[1536px] grid-cols-1 items-center gap-8 px-6 py-8 lg:grid-cols-[1fr_38%] lg:gap-6 lg:px-10">
         {/* LEFT: branding + illustration */}
         <section className="flex flex-col items-center text-center">
           <img
@@ -80,7 +78,7 @@ function SignInPage() {
 
         {/* RIGHT: login card */}
         <section className="mx-auto w-full max-w-[560px]">
-          <div className="login-card px-7 py-10 sm:px-10 sm:py-12">
+          <div className="login-card flex flex-col justify-center px-7 py-10 sm:px-10 sm:py-14 lg:min-h-[calc(100vh-4rem)]">
             <div className="flex justify-center">
               <div className="shield-badge">
                 <Lock className="h-7 w-7 text-white" strokeWidth={3} />
@@ -90,7 +88,7 @@ function SignInPage() {
             <p className="mt-6 text-center text-lg font-bold uppercase tracking-[0.28em] text-gradient-brand">
               Secure Access
             </p>
-            <div className="mx-auto mt-3 h-[3px] w-16 rounded-full bg-brand-line" />
+            <div className="mx-auto mt-3 h-[2px] w-20 rounded-full bg-brand-line" />
 
             <h1 className="mt-4 text-center text-5xl font-bold tracking-tight text-brand-navy sm:text-[56px]">
               Sign In
@@ -174,8 +172,7 @@ function SignInPage() {
               )}
 
               <button type="submit" disabled={loading} className="btn-brand">
-                <span>{loading ? "Signing in…" : "Login Account"}</span>
-                <ArrowRight className="h-6 w-6" strokeWidth={3} />
+                <span>{loading ? "Signing in…" : "Login"}</span>
               </button>
             </form>
           </div>

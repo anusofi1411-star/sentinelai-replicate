@@ -202,25 +202,25 @@
 
 @utility brand-circuit {
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 340px;
-  width: 340px;
+  inset: 0;
   pointer-events: none;
+  opacity: 0.55;
   background-image:
-    linear-gradient(115deg, transparent 46%, oklch(0.7 0.2 340 / 0.35) 47%, transparent 48%),
-    linear-gradient(115deg, transparent 56%, oklch(0.68 0.18 250 / 0.3) 57%, transparent 58%),
-    linear-gradient(115deg, transparent 66%, oklch(0.7 0.2 300 / 0.25) 67%, transparent 68%);
+    linear-gradient(115deg, transparent 49.6%, oklch(0.72 0.05 250 / 0.5) 49.8%, transparent 50%),
+    linear-gradient(65deg, transparent 29.7%, oklch(0.72 0.05 250 / 0.4) 29.9%, transparent 30.1%),
+    linear-gradient(0deg, transparent 19.8%, oklch(0.75 0.04 250 / 0.35) 20%, transparent 20.2%),
+    linear-gradient(90deg, transparent 39.8%, oklch(0.75 0.04 250 / 0.3) 40%, transparent 40.2%);
+  background-size: 220px 220px, 260px 260px, 180px 180px, 200px 200px;
 }
 
 @utility login-card {
-  border-radius: 2rem;
-  border: 1px solid oklch(0.88 0.05 255 / 0.8);
-  background: linear-gradient(160deg, oklch(1 0 0 / 0.85), oklch(0.96 0.02 255 / 0.75));
-  backdrop-filter: blur(18px);
+  border-radius: 2.5rem;
+  border: 1px solid oklch(0.92 0.02 255);
+  background: oklch(0.995 0.003 255 / 0.96);
+  backdrop-filter: blur(14px);
   box-shadow:
-    0 24px 60px -20px oklch(0.55 0.18 275 / 0.28),
-    0 0 0 1px oklch(1 0 0 / 0.6) inset;
+    0 30px 70px -28px oklch(0.55 0.1 265 / 0.22),
+    0 0 0 1px oklch(1 0 0 / 0.7) inset;
 }
 
 @utility shield-badge {
