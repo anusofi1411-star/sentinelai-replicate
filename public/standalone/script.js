@@ -65,7 +65,7 @@
       showError("Invalid credentials. Access denied.");
     } finally {
       btn.disabled = false;
-      label.textContent = "Login Account";
+      label.textContent = "Login";
     }
   });
 })();
