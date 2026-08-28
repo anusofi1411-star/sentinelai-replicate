@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 
 import { supabase } from "@/integrations/supabase/client";
-import logoAsset from "@/assets/sentinel-logo-v3.png.asset.json";
-import labAsset from "@/assets/lab-network-v3.png.asset.json";
+import logoAsset from "@/assets/sentinel-logo-v4.png.asset.json";
+import labAsset from "@/assets/lab-network-v4.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
