@@ -20,6 +20,8 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Access your laboratory security dashboard on SentinelAI-X.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: SignInPage,
@@ -50,21 +52,21 @@ function SignInPage() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-brand-canvas">
+    <main className="exact-page relative overflow-hidden bg-brand-canvas">
       <div className="brand-circuit" aria-hidden="true" />
 
-      <div className="relative mx-auto grid min-h-screen w-full max-w-[1536px] grid-cols-1 items-center gap-8 px-6 py-8 lg:grid-cols-[1fr_38%] lg:gap-6 lg:px-10">
+      <div className="exact-grid relative mx-auto grid w-full grid-cols-1 items-center">
         {/* LEFT: branding + illustration */}
-        <section className="flex flex-col items-center text-center">
+        <section className="exact-brand flex min-h-0 flex-col items-center text-center">
           <img
             src={logoAsset.url}
             alt="SentinelAI-X — Distributed Laboratory Security System"
-            className="w-full max-w-[560px]"
+            className="exact-logo w-full object-contain"
           />
-          <p className="mt-6 text-xl font-bold text-brand-navy sm:text-2xl lg:text-[30px]">
+          <p className="exact-tagline font-bold text-brand-navy">
             “The Intelligence Behind Laboratory Security.”
           </p>
-          <p className="mt-4 text-base font-extrabold tracking-[0.18em] sm:text-lg lg:text-[22px]">
+          <p className="exact-slogan font-extrabold tracking-[0.18em]">
             <span className="text-brand-blue">DETECT.</span>{" "}
             <span className="text-brand-violet">ANALYZE.</span>{" "}
             <span className="text-brand-pink">PROTECT.</span>
@@ -72,13 +74,13 @@ function SignInPage() {
           <img
             src={labAsset.url}
             alt="Distributed laboratory network with LAB 01 to LAB 04 nodes connected to a central secured server"
-            className="mt-4 w-full max-w-[860px]"
+            className="exact-labs min-h-0 w-full object-contain"
           />
         </section>
 
         {/* RIGHT: login card */}
-        <section className="mx-auto w-full max-w-[560px]">
-          <div className="login-card flex flex-col justify-center px-7 py-10 sm:px-10 sm:py-14 lg:min-h-[calc(100vh-4rem)]">
+        <section className="exact-card-wrap mx-auto w-full">
+          <div className="exact-card login-card flex h-full flex-col justify-center px-7 py-8 sm:px-10">
             <div className="flex justify-center">
               <div className="shield-badge">
                 <Lock className="h-7 w-7 text-white" strokeWidth={3} />

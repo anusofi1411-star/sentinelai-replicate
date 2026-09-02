@@ -272,3 +272,157 @@
   box-shadow: 0 18px 36px -12px oklch(0.5 0.24 290 / 0.55);
   transition: filter 150ms ease;
 }
+
+/* Single-viewport sign-in composition */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.exact-page {
+  height: 100vh;
+  height: 100dvh;
+}
+
+.exact-grid {
+  height: 100%;
+  max-width: 1536px;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: clamp(1rem, 4vh, 2.5rem) clamp(1rem, 3vw, 3rem);
+}
+
+.exact-brand {
+  height: 100%;
+  justify-content: center;
+}
+
+.exact-logo {
+  max-width: min(82%, 560px);
+  max-height: 18vh;
+}
+
+.exact-tagline {
+  margin-top: clamp(0.5rem, 1.7vh, 1.25rem);
+  font-size: clamp(1rem, 1.75vw, 1.65rem);
+  line-height: 1.2;
+}
+
+.exact-slogan {
+  margin-top: clamp(0.45rem, 1.35vh, 1rem);
+  font-size: clamp(0.8rem, 1.35vw, 1.25rem);
+  line-height: 1.2;
+}
+
+.exact-labs {
+  margin-top: clamp(0.5rem, 1.3vh, 1rem);
+  max-width: 860px;
+  max-height: 51vh;
+}
+
+.exact-card-wrap {
+  height: min(86vh, 800px);
+  max-width: 560px;
+}
+
+@media (min-width: 1024px) {
+  .exact-grid {
+    grid-template-columns: minmax(0, 60%) minmax(360px, 40%);
+  }
+}
+
+@media (max-width: 1023px) {
+  .exact-grid {
+    grid-template-rows: minmax(0, 35%) minmax(0, 65%);
+    gap: 0.5rem;
+    padding-block: 0.75rem;
+  }
+
+  .exact-logo {
+    max-height: 9vh;
+    max-width: min(78%, 440px);
+  }
+
+  .exact-tagline {
+    margin-top: 0.2rem;
+    font-size: clamp(0.8rem, 2.8vw, 1.1rem);
+  }
+
+  .exact-slogan {
+    margin-top: 0.2rem;
+    font-size: clamp(0.65rem, 2.3vw, 0.95rem);
+  }
+
+  .exact-labs {
+    margin-top: 0.15rem;
+    max-height: 20vh;
+    max-width: 520px;
+  }
+
+  .exact-card-wrap {
+    height: 100%;
+    max-width: 560px;
+  }
+
+  .exact-card {
+    border-radius: 1.75rem;
+    padding-block: 0.75rem;
+  }
+
+  .exact-card .shield-badge {
+    width: 3.25rem;
+    height: 3.6rem;
+  }
+
+  .exact-card form {
+    margin-top: 0.5rem;
+  }
+
+  .exact-card h1 {
+    margin-top: 0.35rem;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .exact-card h1 + p {
+    margin-top: 0.35rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .exact-card form > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.75rem;
+  }
+
+  .exact-card .field {
+    height: 3.25rem;
+  }
+
+  .exact-card .btn-brand {
+    padding-block: 0.75rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-height: 720px) {
+  .exact-card {
+    padding-block: 1rem;
+  }
+
+  .exact-card .shield-badge {
+    height: 3.5rem;
+    width: 3.25rem;
+  }
+
+  .exact-card form {
+    margin-top: 1rem;
+  }
+
+  .exact-card .field {
+    height: 3.25rem;
+  }
+
+  .exact-card .btn-brand {
+    padding-block: 0.8rem;
+  }
+}
