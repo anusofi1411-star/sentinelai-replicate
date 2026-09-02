@@ -53,7 +53,14 @@ function SignInPage() {
 
   return (
     <main className="exact-page relative overflow-hidden bg-brand-canvas">
-      <div className="brand-circuit" aria-hidden="true" />
+      <div className="brand-circuit" aria-hidden="true">
+        <span className="circuit-node circuit-node-one" />
+        <span className="circuit-node circuit-node-two" />
+        <span className="circuit-node circuit-node-three" />
+        <span className="circuit-node circuit-node-four" />
+        <span className="circuit-node circuit-node-five" />
+        <span className="circuit-node circuit-node-six" />
+      </div>
 
       <div className="exact-grid relative mx-auto grid w-full grid-cols-1 items-center">
         {/* LEFT: branding + illustration */}
