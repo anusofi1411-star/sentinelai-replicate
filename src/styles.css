@@ -204,14 +204,38 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.78;
   background-image:
-    linear-gradient(115deg, transparent 49.6%, oklch(0.72 0.05 250 / 0.5) 49.8%, transparent 50%),
-    linear-gradient(65deg, transparent 29.7%, oklch(0.72 0.05 250 / 0.4) 29.9%, transparent 30.1%),
-    linear-gradient(0deg, transparent 19.8%, oklch(0.75 0.04 250 / 0.35) 20%, transparent 20.2%),
-    linear-gradient(90deg, transparent 39.8%, oklch(0.75 0.04 250 / 0.3) 40%, transparent 40.2%);
-  background-size: 220px 220px, 260px 260px, 180px 180px, 200px 200px;
+    radial-gradient(circle at 13% 8%, oklch(0.78 0.16 230 / 0.34), transparent 1.5%, transparent 15%),
+    radial-gradient(circle at 91% 16%, oklch(0.78 0.14 330 / 0.25), transparent 1.5%, transparent 17%),
+    linear-gradient(115deg, transparent 49.72%, oklch(0.72 0.12 235 / 0.38) 49.84%, transparent 50%),
+    linear-gradient(65deg, transparent 29.72%, oklch(0.75 0.12 325 / 0.32) 29.84%, transparent 30%),
+    linear-gradient(0deg, transparent 19.85%, oklch(0.75 0.08 250 / 0.3) 19.94%, transparent 20.05%),
+    linear-gradient(90deg, transparent 39.85%, oklch(0.75 0.08 250 / 0.28) 39.94%, transparent 40.05%);
+  background-size: 100% 100%, 100% 100%, 220px 220px, 260px 260px, 180px 180px, 200px 200px;
 }
+
+.circuit-node {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 2px solid oklch(0.98 0.02 240);
+  border-radius: 9999px;
+  background: oklch(0.73 0.19 235);
+  box-shadow: 0 0 9px 3px oklch(0.72 0.18 235 / 0.48);
+}
+
+.circuit-node:nth-child(even) {
+  background: oklch(0.78 0.18 325);
+  box-shadow: 0 0 9px 3px oklch(0.75 0.18 325 / 0.42);
+}
+
+.circuit-node-one { left: 5%; top: 13%; }
+.circuit-node-two { left: 31%; top: 7%; }
+.circuit-node-three { left: 55%; top: 43%; }
+.circuit-node-four { left: 94%; top: 35%; }
+.circuit-node-five { left: 7%; top: 83%; }
+.circuit-node-six { left: 61%; top: 91%; }
 
 @utility login-card {
   border-radius: 2.5rem;
@@ -288,7 +312,7 @@ body {
 .exact-grid {
   height: 100%;
   max-width: 1536px;
-  gap: clamp(1rem, 2vw, 2rem);
+  gap: 0;
   padding: clamp(1rem, 4vh, 2.5rem) clamp(1rem, 3vw, 3rem);
 }
 
@@ -298,8 +322,8 @@ body {
 }
 
 .exact-logo {
-  max-width: min(82%, 560px);
-  max-height: 18vh;
+  max-width: min(88%, 640px);
+  max-height: 19vh;
 }
 
 .exact-tagline {
@@ -316,8 +340,8 @@ body {
 
 .exact-labs {
   margin-top: clamp(0.5rem, 1.3vh, 1rem);
-  max-width: 860px;
-  max-height: 51vh;
+  max-width: 900px;
+  max-height: 55vh;
 }
 
 .exact-card-wrap {
@@ -327,7 +351,11 @@ body {
 
 @media (min-width: 1024px) {
   .exact-grid {
-    grid-template-columns: minmax(0, 60%) minmax(360px, 40%);
+    grid-template-columns: minmax(0, 59%) minmax(360px, 41%);
+  }
+
+  .exact-card-wrap {
+    transform: translateX(-1.25vw);
   }
 }
 
@@ -362,6 +390,7 @@ body {
   .exact-card-wrap {
     height: 100%;
     max-width: 560px;
+    transform: none;
   }
 
   .exact-card {
