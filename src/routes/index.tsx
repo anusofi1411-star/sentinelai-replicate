@@ -3,8 +3,7 @@ import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 
 import { supabase } from "@/integrations/supabase/client";
-import logoAsset from "@/assets/sentinelai-x-logo-hd-transparent.png";
-import labAsset from "@/assets/lab-network-v4.png.asset.json";
+import leftVisual from "@/assets/sentinel-left-hd.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,25 +62,12 @@ function SignInPage() {
       </div>
 
       <div className="exact-grid relative mx-auto grid w-full grid-cols-1 items-center">
-        {/* LEFT: branding + illustration */}
+        {/* LEFT: unified HD branding + laboratory network illustration */}
         <section className="exact-brand flex min-h-0 flex-col items-center text-center">
           <img
-            src={logoAsset}
-            alt="SentinelAI-X — Distributed Laboratory Security System"
-            className="exact-logo w-full object-contain"
-          />
-          <p className="exact-tagline font-bold text-brand-navy">
-            “The Intelligence Behind Laboratory Security.”
-          </p>
-          <p className="exact-slogan font-extrabold tracking-[0.18em]">
-            <span className="text-brand-blue">DETECT.</span>{" "}
-            <span className="text-brand-violet">ANALYZE.</span>{" "}
-            <span className="text-brand-pink">PROTECT.</span>
-          </p>
-          <img
-            src={labAsset.url}
-            alt="Distributed laboratory network with LAB 01 to LAB 04 nodes connected to a central secured server"
-            className="exact-labs min-h-0 w-full object-contain"
+            src={leftVisual}
+            alt="SentinelAI-X distributed laboratory security network with LAB 01 to LAB 04 connected to a central secured server"
+            className="exact-left-visual h-full w-full object-contain"
           />
         </section>
 

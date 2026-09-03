@@ -319,29 +319,13 @@ body {
 .exact-brand {
   height: 100%;
   justify-content: center;
+  overflow: hidden;
 }
 
-.exact-logo {
-  max-width: min(88%, 640px);
-  max-height: 19vh;
-}
-
-.exact-tagline {
-  margin-top: clamp(0.5rem, 1.7vh, 1.25rem);
-  font-size: clamp(1rem, 1.75vw, 1.65rem);
-  line-height: 1.2;
-}
-
-.exact-slogan {
-  margin-top: clamp(0.45rem, 1.35vh, 1rem);
-  font-size: clamp(0.8rem, 1.35vw, 1.25rem);
-  line-height: 1.2;
-}
-
-.exact-labs {
-  margin-top: clamp(0.5rem, 1.3vh, 1rem);
-  max-width: 900px;
-  max-height: 55vh;
+.exact-left-visual {
+  max-height: 100%;
+  filter: saturate(1.03) contrast(1.02);
+  mix-blend-mode: multiply;
 }
 
 .exact-card-wrap {
@@ -366,24 +350,7 @@ body {
     padding-block: 0.75rem;
   }
 
-  .exact-logo {
-    max-height: 9vh;
-    max-width: min(78%, 440px);
-  }
-
-  .exact-tagline {
-    margin-top: 0.2rem;
-    font-size: clamp(0.8rem, 2.8vw, 1.1rem);
-  }
-
-  .exact-slogan {
-    margin-top: 0.2rem;
-    font-size: clamp(0.65rem, 2.3vw, 0.95rem);
-  }
-
-  .exact-labs {
-    margin-top: 0.15rem;
-    max-height: 20vh;
+  .exact-left-visual {
     max-width: 520px;
   }
 
