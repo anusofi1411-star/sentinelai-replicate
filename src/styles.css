@@ -343,7 +343,7 @@ body {
 
 @media (min-width: 1024px) {
   .exact-grid {
-    grid-template-columns: minmax(0, 59%) minmax(360px, 41%);
+    grid-template-columns: minmax(0, 60%) minmax(360px, 40%);
   }
 
   .exact-card-wrap {
