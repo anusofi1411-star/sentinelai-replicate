@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 
 import { supabase } from "@/integrations/supabase/client";
-import logoAsset from "@/assets/sentinelai-x-logo-cropped.png.asset.json";
+import logoAsset from "@/assets/sentinelai-x-logo-hd-transparent.png";
 import labAsset from "@/assets/lab-network-v4.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -66,7 +66,7 @@ function SignInPage() {
         {/* LEFT: branding + illustration */}
         <section className="exact-brand flex min-h-0 flex-col items-center text-center">
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="SentinelAI-X — Distributed Laboratory Security System"
             className="exact-logo w-full object-contain"
           />
